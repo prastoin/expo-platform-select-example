@@ -1,0 +1,17 @@
+import GoogleMapReact from "google-map-react";
+import React from "react";
+import { MapFunctionComponent } from "./contract";
+
+const WebMaps: MapFunctionComponent = ({ positionConstraintPosition }, _) => {
+  return (
+    <div style={{ height: "100vh", width: "100%" }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "" }}
+        defaultCenter={positionConstraintPosition}
+        defaultZoom={9}
+      ></GoogleMapReact>
+    </div>
+  );
+};
+
+export default WebMaps;

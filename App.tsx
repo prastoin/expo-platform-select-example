@@ -1,26 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import GoogleMapReact from "google-map-react";
 import * as React from "react";
-import { Dimensions, Platform, StyleSheet, View } from "react-native";
-import MapView from "react-native-maps";
+import { Dimensions, StyleSheet, View } from "react-native";
+import MapComponent from "./MapComponent";
 
 export default function App() {
-  const platformIsWeb = Platform.OS === "web";
-
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {platformIsWeb ? (
-        <div style={{ height: "100vh", width: "100%" }}>
-          <GoogleMapReact
-            bootstrapURLKeys={{ key: "dev" }}
-            defaultCenter={{ lat: 0, lng: 0 }}
-            defaultZoom={1}
-          ></GoogleMapReact>
-        </div>
-      ) : (
-        <MapView style={styles.map} />
-      )}
+      <MapComponent
+        positionConstraintPosition={{
+          lat: 48.866667,
+          lng: 2.333333,
+        }}
+      />
     </View>
   );
 }
