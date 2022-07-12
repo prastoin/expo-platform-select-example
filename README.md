@@ -1,6 +1,6 @@
 # Expo dynamic platform OS rendering with Typescript
 
-This repo illustrates the following [article](https://prastoin.netlify.app/writing/posts/adonis-socket-io-authentication/).
+This repo illustrates the following [article](https://prastoin.netlify.app/writing/posts/expo-dynamic-platform-rendering/).
 It contains a Typescript expo application that runs different maps component for both native and web platform OS.
 
 ## Setup
