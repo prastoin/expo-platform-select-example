@@ -4,7 +4,7 @@ export interface LatlngCoords {
 }
 
 export interface MapComponentProps {
-  positionConstraintPosition: LatlngCoords;
+  defaultMapCenterCoords: LatlngCoords;
 }
 
 export type MapFunctionComponent = React.FC<MapComponentProps>;

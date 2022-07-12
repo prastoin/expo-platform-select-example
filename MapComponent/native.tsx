@@ -2,12 +2,13 @@ import React from "react";
 import MapView from "react-native-maps";
 import { MapFunctionComponent } from "./contract";
 
-const NativeMaps: MapFunctionComponent = ({ positionConstraintPosition }) => {
+const NativeMaps: MapFunctionComponent = ({ defaultMapCenterCoords }) => {
   return (
     <MapView
       initialRegion={{
-        latitude: positionConstraintPosition.lat,
-        longitude: positionConstraintPosition.lng,
+        latitude: defaultMapCenterCoords.lat,
+        longitude: defaultMapCenterCoords.lng,
+        // See https://stackoverflow.com/questions/50882700/react-native-mapview-what-is-latitudedelta-longitudedelta
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}

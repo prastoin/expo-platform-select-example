@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { Platform } from "react-native";
 import { MapFunctionComponent } from "./contract";
 
